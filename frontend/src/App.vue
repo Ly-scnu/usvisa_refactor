@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="ops-shell">
     <aside class="ops-rail">
-      <div class="rail-logo" title="OpenSands">A</div>
+      <div class="rail-logo" title="OpenSands"><img src="./assets/opensands-logo.svg" alt="OpenSands" /></div>
       <button
         v-for="item in nav"
         :key="item.key"
@@ -99,3 +99,4 @@ onMounted(async () => {
   store.connectWs()
 })
 </script>
+
