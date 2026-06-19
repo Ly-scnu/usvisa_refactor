@@ -1,0 +1,216 @@
+[system]
+name = "OpenSands US Visa Refactor"
+environment = "local-ctf"
+api_host = "127.0.0.1"
+api_port = 18890
+frontend_port = 18891
+log_level = "INFO"
+data_dir = "storage"
+
+[target]
+post_name = "BEIJING"
+post_aliases = [ "BEIJING", "北京",]
+post_id = "YOUR_POST_ID"
+# Optional but useful as a safe fallback when the applications table does not
+# expose a schedule URL.  This is configuration data, not a dependency on the
+# legacy project.
+primary_id = "YOUR_APPLICATION_ID"
+applications = ["YOUR_APPLICATION_ID"]
+cutoff_date = "2026-06-22"
+start_date = ""
+end_date = "2026-06-22"
+any_time = true
+is_reschedule = false
+lang = "zh-CN"
+
+[slots]
+total_slots = 10
+waiting_room_slots = 10
+direct_only_slots = []
+queue_wait_seconds = 180
+direct_only_recycle_cooldown_seconds = 120
+early_gate_timeout_seconds = 60
+non_waiting_lane_timeout_seconds = 90
+round_timeout_seconds = 600
+login_wait_seconds = 150
+login_submit_retries = 1
+login_cf_reentry_attempts = 3
+security_question_stable_wait_seconds = 12.0
+
+[producer]
+standalone_smoke = true
+real_browser_probe = false
+routes = "JP:socks5:ASN2516,SG:socks5,US:socks5,JP:socks5,SG:socks5,US:socks5"
+headless = true
+# Optional: leave empty to use backend default, or set your CloakBrowser/Chrome-compatible browser root.
+cloak_browser_root = ""
+cf_click_mode = "cloak_curve_cdp"
+cf_click_strategy = "cloak_curve_cdp"
+max_cf_clicks = 99
+cf_no_screenshots = true
+profile_scope = "slot_stable"
+proxy_sticky_session = true
+proxy_api_retries = 3
+proxy_pool_size = 1
+inline_business_max_dates = 1
+inline_business_live_loop = true
+inline_business_live_interval_seconds = 120.0
+inline_business_live_max_seconds = 600.0
+inline_business_live_failure_grace_rounds = 6
+inline_business_live_max_bad_rounds = 10
+business_page_retry_attempts = 1
+rate_limit_cooldown_seconds = 60
+rate_limit_refresh_attempts = 0
+rate_limit_429_cooldowns_seconds = [ 60, 120, 180,]
+ban_1015_immediate_recycle = true
+protocol_only_post_selection = true
+protocol_direct_from_home = true
+schedule_direct_fallback_after_ms = 800
+slot_start_stagger_seconds = 30
+failed_round_cooldown_seconds = 20
+network_error_cooldown_seconds = 0
+network_error_round_cooldown_seconds = 60
+network_error_direct_fallback = false
+business_fetch_timeout_ms = 15000
+business_validate = false
+ignore_budget = true
+
+[smart_orchestrator]
+enabled = true
+normal_target_result_interval_seconds = 60.0
+target_success_interval_seconds = 60.0
+target_global_query_interval_seconds = 60.0
+per_session_min_query_interval_seconds = 180.0
+per_session_query_jitter_seconds = [0, 30]
+query_failure_cooldown_seconds = 180.0
+query_failure_jitter_seconds = [30, 90]
+active_query_lease_seconds = 90.0
+wait_poll_seconds = 2.0
+allow_early_query_launch = true
+query_launch_lead_seconds = 12.0
+query_launch_lead_min_seconds = 5.0
+query_launch_lead_max_seconds = 25.0
+early_success_tolerance_seconds = 5.0
+coverage_window_seconds = 240
+min_slots = 10
+max_slots = 10
+normal_active_slots = 10
+target_ready_sessions = 5
+min_hot_sessions = 3
+soft_active_slots = 6
+adaptive_inventory_active_slots = 8
+severe_gap_active_slots = 10
+cold_start_active_slots = 3
+release_cold_start_active_slots = 4
+scale_up_stale_success_seconds = 240
+critical_stale_success_seconds = 600
+scale_up_cooldown_seconds = 60
+prewarm_window_seconds = 45
+missed_target_grace_seconds = 30
+event_window_seconds = 600
+waiting_room_pressure_threshold = 0.45
+cf_pressure_threshold = 0.45
+risk_pressure_threshold = 0.95
+cf_storm_event_threshold = 12
+rate_limit_storm_event_threshold = 999
+churn_event_threshold = 25
+stable_success_window_count = 5
+successful_session_recovery_grace_rounds = 10
+successful_session_hard_recycle_rounds = 3
+inventory_enabled = true
+target_hot_query_sessions = 2
+target_login_standby_sessions = 1
+target_candidate_sessions = 1
+peak_target_hot_query_sessions = 3
+peak_target_candidate_sessions = 2
+drain_enabled = false
+drain_grace_seconds = 90
+drain_check_seconds = 30
+peak_prewarm_minutes = 5
+peak_cooldown_minutes = 3
+release_periods_enabled = false
+release_period_windows = ["00-59"]
+release_period_target_success_interval_seconds = 60.0
+release_period_desired_active_slots = 10
+release_period_min_hot_sessions = 3
+release_force_full_fanout = false
+normal_candidate_count = 2
+release_candidate_count = 3
+release_burst_interval_seconds = 60.0
+release_wait_poll_seconds = 0.3
+release_active_query_lease_seconds = 45.0
+release_per_session_min_query_interval_seconds = 180.0
+release_failure_cooldown_seconds = 120.0
+waiting_room_min_wait_seconds = 30
+waiting_room_default_wait_seconds = 30
+waiting_room_max_wait_seconds = 60
+waiting_room_loose_max_wait_seconds = 180
+waiting_room_peak_budget_slots = 3
+waiting_room_prewarm_budget_slots = 3
+waiting_room_stale_budget_slots = 2
+waiting_room_loose_budget_slots = 3
+bad_session_cooldown_seconds = 90.0
+release_bad_session_cooldown_seconds = 30.0
+page_view_blocked_cooldown_seconds = 60.0
+release_page_view_blocked_cooldown_seconds = 120.0
+auth_or_cf_cooldown_seconds = 90.0
+release_auth_or_cf_cooldown_seconds = 60.0
+rate_limited_cooldown_seconds = 240.0
+release_rate_limited_cooldown_seconds = 120.0
+failed_fetch_cooldown_seconds = 120.0
+release_failed_fetch_cooldown_seconds = 120.0
+terminal_session_cooldown_seconds = 180.0
+normal_session_cooldown_bypass_after_seconds = 30.0
+slot_restart_cooldown_seconds = 15.0
+route_recovery_ramp_enabled = true
+route_recovery_ramp_window_seconds = 900.0
+route_recovery_ramp_step_seconds = 60.0
+route_recovery_ramp_initial_slots = 3
+route_recovery_ramp_max_slots = 6
+route_recovery_ramp_peak_max_slots = 8
+route_score_enabled = true
+route_score_event_tail_limit = 8000
+route_score_window_seconds = [600, 1800, 3600]
+route_score_window_weights = [0.50, 0.35, 0.15]
+route_max_active_share = 0.40
+login_submit_min_gap_seconds = 1800.0
+login_submit_lease_seconds = 180.0
+login_door_wait_poll_seconds = 10.0
+login_stop_when_hot_sessions = 3
+account_login_block_cooldown_seconds = 43200.0
+account_login_block_cooldown_schedule_seconds = [43200, 86400, 86400]
+
+[[smart_orchestrator.peak_windows]]
+name = "half_hour_release"
+start = "11:25"
+end = "11:35"
+target_success_interval_seconds = 60.0
+desired_active_slots = 8
+min_hot_sessions = 3
+
+[[smart_orchestrator.peak_windows]]
+name = "noon_release"
+start = "11:55"
+end = "12:05"
+target_success_interval_seconds = 1.0
+desired_active_slots = 10
+min_hot_sessions = 3
+
+[booking]
+armed = false
+max_parallel_submit = 2
+parallel_submit_delays_ms = [ 0, 250,]
+submit_timeout_seconds = 20
+success_latch = true
+prefer_in_process_submit = true
+ui_fallback_enabled = true
+ui_fallback_allow_navigation = false
+ui_fallback_on_classes = [ "business_error", "failed", "exception",]
+
+
+
+
+
+
+
+

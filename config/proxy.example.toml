@@ -1,0 +1,29 @@
+# Example only. Do not commit real proxy credentials.
+
+[[routes]]
+country = "JP"
+proxy_type = "socks5"
+asn = "ASN2516"
+weight = 1
+
+[[routes]]
+country = "SG"
+proxy_type = "socks5"
+asn = ""
+weight = 1
+
+[[routes]]
+country = "US"
+proxy_type = "socks5"
+asn = ""
+weight = 1
+
+[provider]
+name = "your_proxy_provider"
+host = "proxy.example.com"
+port = 10000
+account = "YOUR_PROXY_ACCOUNT"
+password = "YOUR_PROXY_PASSWORD"
+default_type = "socks5"
+sticky_session = true
+sticky_minutes = 90

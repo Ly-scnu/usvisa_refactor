@@ -1,0 +1,7 @@
+fastapi>=0.100
+uvicorn[standard]>=0.23
+pydantic>=2
+sqlalchemy>=2
+toml>=0.10
+PyYAML>=6
+playwright>=1.40

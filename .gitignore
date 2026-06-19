@@ -1,0 +1,60 @@
+﻿# Python / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Real local configs / secrets. Commit only *.example.toml
+config/*.toml
+!config/*.example.toml
+!config/README.md
+
+# Runtime data: never upload cookies, browser profiles, logs, screenshots, DB, tickets
+storage/
+!storage/.gitkeep
+
+# Temporary status dumps and local analysis artifacts
+temp*.json
+*_status*.json
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.har
+*.pcap
+*.pcapng
+
+# Browser / Playwright / Chromium profiles
+browser_profiles/
+**/browser_profiles/
+**/Default/Network/Cookies*
+**/Default/Login Data*
+**/Default/Local Storage/
+**/Default/Session Storage/
+**/Default/IndexedDB/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

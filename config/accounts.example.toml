@@ -1,0 +1,7 @@
+[[accounts]]
+id = "main"
+username = "YOUR_USERNAME_OR_PHONE"
+password = "YOUR_PASSWORD"
+
+# 按你的项目实际字段补充，但不要提交真实密保答案/身份信息。
+# security_answers = { "question keyword" = "answer" }
