@@ -1,7 +1,7 @@
 # 美签 US Visa Refactor
 
 <p align="center">
-  <a href="https://github.com/Ly-scnu/usvisa_refactor/stargazers"><img src="https://img.shields.io/badge/GitHub-Star%20%E6%94%AF%E6%8C%81-yellow?logo=github" alt="GitHub Star" /></a>
+  <a href="https://github.com/Ly-scnu/usvisa_refactor/stargazers"><img src="https://img.shields.io/github/stars/Ly-scnu/usvisa_refactor?style=social" alt="GitHub Stars" /></a>
   <img src="https://img.shields.io/badge/license-Non--Commercial-red" alt="Non-Commercial License" />
   <img src="https://img.shields.io/badge/backend-FastAPI-009688" alt="FastAPI" />
   <img src="https://img.shields.io/badge/frontend-Vue%203-42b883" alt="Vue 3" />
@@ -10,6 +10,7 @@
 
 > 一个面向本地研究、工程化学习和自动化控制台架构交流的重构项目。  
 > 一个人长期维护这套系统很累，欢迎 Star、Issue、PR、合作开发、赞助支持，也欢迎自动化、浏览器工程、前端、后端、调度系统方向的大佬指导。
+> 如果这个项目对你有帮助，或者给你带来一点启发，欢迎点一个 Star 支持一下；Star 是我继续维护、吸引合作伙伴和争取赞助的重要动力。
 
 <p align="center">
   <img src="picture/1.png" alt="美签 US Visa Refactor UI" width="92%" />
@@ -175,8 +176,13 @@ git add -n .
 
 ## Star History
 
-当前仓库仍为 private，Star History、真实 Star 数等第三方动态图无法读取私有仓库数据。仓库公开后，可以启用动态曲线。
+如果项目对你有帮助，欢迎 Star 支持，也欢迎加入群交流、提交 Issue、发 PR 或提供合作建议。
 
+<p align="center">
+  <a href="https://star-history.com/#Ly-scnu/usvisa_refactor&Date">
+    <img src="https://api.star-history.com/svg?repos=Ly-scnu/usvisa_refactor&type=Date" alt="Star History Chart" width="92%" />
+  </a>
+</p>
 ## 当前状态
 
 - 项目仍在持续重构和迭代。
