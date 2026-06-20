@@ -183,6 +183,11 @@ git add -n .
     <img src="https://api.star-history.com/svg?repos=Ly-scnu/usvisa_refactor&type=Date" alt="Star History Chart" width="92%" />
   </a>
 </p>
+
+## 社区鸣谢
+
+本项目认可并感谢 [LINUX DO 社区](https://linux.do/) 提供的开放交流氛围，也欢迎来自 LINUX DO 和其他技术社区的朋友交流、指导、共建。
+
 ## 当前状态
 
 - 项目仍在持续重构和迭代。
